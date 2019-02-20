@@ -1,0 +1,117 @@
+// 字体大小
+$font-size-xxl: 34px;
+$font-size-xl: 20px;
+$font-size-l: 16px;
+$font-size-m: 14px;
+$font-size-s: 12px;
+
+// font style
+@mixin font-class($fontSize, $fontColor) {
+  font-size: $fontSize;
+  color: $fontColor;
+}
+
+/* 层级一 */
+// 模块标题
+@mixin font-title {
+  @include font-class($font-size-xl, $color-text);
+}
+
+/* 层级二 */
+// 面包屑导航等标题
+@mixin font-subtitle {
+  @include font-class($font-size-l, $color-text);
+}
+
+/* 层级三 */
+// 主题区域内容
+@mixin font-text {
+  @include font-class($font-size-m, $color-text);
+}
+
+/* 层级四 */
+// 主题区域提示信息
+@mixin font-tip {
+  @include font-class($font-size-s, $color-tooltip);
+}
+
+%no-select {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently*/
+}
+
+// Margin
+$margin-xl: 48px;
+$margin-l: 32px;
+$margin-m: 16px;
+$margin-s: 8px;
+
+// Padding
+$padding-xl: 48px;
+$padding-l: 32px;
+$padding-m: 16px;
+$padding-s: 8px;
+
+// 当前主题色
+$color-header: #637896;
+$color-primary: #3D80DB;
+$color-secondary: #DDE9FB;
+$color-hover: #F0F6FF;
+$color-main-region-bg: #FFF;
+$color-button: #3D80DB;
+$color-button-hover: #3169B5;
+
+// 主题公用颜色
+$color-text: #222;
+$color-footer-bg: #E2E4E7;
+$color-tooltip: #888;
+$color-footer: #888;
+
+// 常见状态颜色
+$color-alert: #F62626;
+$color-warning: #FD7222;
+$color-success: #0AB259;
+$color-inactive: #F1F1F1; // 暂未被激活状态，可以被激活，只是暂时没有轮到它，注意和 disable 区分
+$color-disable: #888888;  // 不可用状态，注意和 inactive 区分
+$color-disable-bg: #F1F1F1;
+$color-disable-fill: #C0C0C0; // 不可用状态下 radio / checkbox 中心填充颜色
+
+// 色值
+$color-white: #FFFFFF;
+
+// Border color
+$color-border-dark: #A5A5A5;
+$color-border: #CCCCCC;
+$color-border-50: #E5E5E5; // border color with 50% opacity
+
+// Border
+$border-dark: 1px solid $color-border-dark;
+$border-normal: 1px solid $color-border;
+$border-light: 1px solid $color-border-50;
+$border-radius-middle: 2px;
+
+// 弹框（toast 和 modal）
+$toast-width: 300px;
+$toast-height: 60px;
+
+$modal-width-s: 320px;
+$modal-width-m: 570px;
+
+// 其他杂项
+$content-width: 960px; // 主体内容宽度
+$left-sidebar-width: 240px; // 侧边栏宽度
+
+$header-height: 56px; // Header 高度
+$footer-height: 160px; // Footer 高度
+
+$box-shadow: 0 0 6px 0 rgba(150, 150, 150, .5);
